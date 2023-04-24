@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<h1>{{ title }}</h1>
+
+		<ul class="list-group">
+			{% for movie in movies %}
+				<li class="list-group-item">{{movie.title}} - {{movie.part}} - {{movie.type}} - {{movie.cover}} - {{movie.comment}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
